@@ -1,0 +1,10 @@
+$stationNumbers = array_column($allDataAssocArray, 'StationNumber');
+$count = array_count_values($stationNumbers);
+    
+$stationnumber_amount_array = array();
+foreach($allDataAssocArray as $data) {
+   if ($count[$data['StationNumber']] == $numberrequiredrecords) {
+         if(!array_key_exists($data['StationNumber'], $stationnumber_amount_array))
+                 $stationnumber_amount_array[$data['StationNumber']] = 0;
+         $stationnumber_amount_array[$data['StationNumber']] += $data['TotalPrecip'];
+          
