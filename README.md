@@ -1,5 +1,4 @@
 # PrecipitationTotalTool
-I built a tool to automate the calculation of precipitation totals for a given date range on the CoCoRaHS network. 
 There is large nation-wide group of weather spotters called CoCoRaHS.  They collect daily rainfall and snowfall reports at personal weather stations on their property.  I built an automated tool to sum precipitation totals from each weather station for a given date range.
 
 A crucial part of this process involved "throwing out" weather stations that were missing at least one daily report.  This was achieved by first counting the number of reports that would be required for a date range.  The number of required records was determined with the help of PHP's date_diff function.  <a href="https://github.com/pmangione/PrecipitationTotalTool/blob/master/DateRangeRequiredRecordSnippet">See the code snippet here.</a> 
