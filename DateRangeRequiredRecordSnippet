@@ -1,0 +1,4 @@
+ $datetime1 = date_create($startdate);
+ $datetime2 = date_create($enddate);
+ $datedifference = date_diff($datetime1, $datetime2);
+ $numberrequiredrecords = $datedifference->days + 1;
